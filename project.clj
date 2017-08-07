@@ -11,7 +11,11 @@
                  [migratus "0.9.8"]
                  [com.stuartsierra/component "0.3.2"]
                  [com.taoensso/timbre "4.10.0"]
-                 [com.fzakaria/slf4j-timbre "0.3.2"]]
+                 [com.fzakaria/slf4j-timbre "0.3.2"]
+                 [cheshire "5.7.1"]
+                 [com.github.scribejava/scribejava "4.2.0"]
+                 [clj-time "0.14.0"]
+                 [camel-snake-kebab "0.4.0"]]
 
   :plugins [[lein-cljsbuild "1.1.4"]
             [lein-less "1.7.5"]]
@@ -43,8 +47,8 @@
                     :asset-path           "js/compiled/out"
                     :source-map-timestamp true
                     :preloads             [devtools.preload]
-                    :external-config      {:devtools/config {:features-to-install :all}}
-                    }}
+                    :external-config      {:devtools/config {:features-to-install :all}}}}
+
     {:id           "min"
      :source-paths ["src/cljs"]
      :jar true

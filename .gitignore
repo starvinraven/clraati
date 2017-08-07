@@ -17,4 +17,5 @@ pom.xml.asc
 /resources/public/js/compiled
 out
 .idea
+/resources/config/secrets.json
 

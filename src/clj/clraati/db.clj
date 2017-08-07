@@ -1,4 +1,7 @@
-(ns clraati.db)
+(ns clraati.db
+  (:require
+    [camel-snake-kebab.core :refer (->kebab-case-keyword)]
+    [camel-snake-kebab.extras :refer [transform-keys]]))
 
 (defonce dbspec (atom nil))
 
@@ -18,4 +21,6 @@
   []
   @dbspec)
 
-
+(defn transform-result
+  [result]
+  (transform-keys ->kebab-case-keyword result))
